@@ -3,7 +3,7 @@
 UMBRAL=90
 LOG_DIR="/var/log"
 TMP_DIR="/tmp"
-INTERVALO=60
+INTERVALO=5
 LOG_BASE="/var/log/monitor_disco"
 MAX_LOGS=7
 
