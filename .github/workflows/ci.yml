@@ -21,7 +21,7 @@ jobs:
         run: shellcheck --version
 
       - name: Analizar monitor.sh
-        run: shellcheck monitor.sh
+        run: shellcheck Lab 5/monitor.sh
 
   # ----------------------------------------------------------
   # Job 2: smoke test — ejecuta el script una vez
@@ -44,7 +44,7 @@ jobs:
           LOG_BASE: ${{ github.workspace }}/logs/monitor_recursos
         run: |
           mkdir -p logs
-          ./monitor.sh
+          Lab 5/./monitor.sh
 
       - name: Mostrar log generado
         if: always()
