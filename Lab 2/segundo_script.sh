@@ -4,9 +4,9 @@ path=carpeta2
 file=archivo2.log
 ruta=$path/$file
 
-if [[ -f "path" ]] then
+if [[ -f "path" ]]; then
 mkdir $path
-if [[ -f "ruta" ]] then
+if [[ -f "ruta" ]]; then
 touch $ruta
 
 while true; do
