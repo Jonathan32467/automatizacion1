@@ -217,6 +217,14 @@ log "=========================================================="
 # Mensaje opcional de arranque a Telegram
 enviar_telegram "🟢 *Monitor iniciado en $(hostname)*\n\nVigilando disco/RAM/CPU cada ${INTERVALO}s."
 
+if [ "${MODO:-}" = "once" ]; then
+    revisar_disco
+    revisar_ram
+    revisar_cpu
+    log "Chequeo único completado. Saliendo."
+    exit 0
+fi
+
 ULTIMO_DIA=$(date '+%Y-%m-%d')
 
 while true; do
